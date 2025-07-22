@@ -1,0 +1,10 @@
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 30%;
+}
+.form{
+    width: 100%;
+    margin-bottom: 19px;
+}
