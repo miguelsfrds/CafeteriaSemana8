@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./assets/images/grao de cafe.png" type="image/x-icon">
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
-    <link rel="stylesheet" href="./assets/css/cardapio.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css"> <!-- CSS do Bootstrap -->
+    <link rel="stylesheet" href="./node_modules/toastify-js/src/toastify.css"> <!-- CSS no Toastify -->
+    <link rel="stylesheet" href="./assets/css/cardapio.css"> <!-- CSS da página -->
     <title>Cardápio Calmoa</title>
 </head>
 
@@ -48,25 +48,45 @@
                 <!--Display Flex com espaçamento entre os elementos de gap-2(8px)-->
                 <div class="d-flex gap-2 ">
                     <input type="text" class="form-control w-100" id="buscarInput" placeholder="Digite algo...">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#botaoModal">+</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#botaoModal">+</button>
                 </div>
             </form>
             <!-- Modal -->
-            <div class="modal fade" id="botaoModal" tabindex="-1" aria-labelledby="botaoModal"
-                aria-hidden="true">
+            <div class="modal fade" id="botaoModal" tabindex="-1" aria-labelledby="botaoModal" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="botaoModal">Cardápio</h1>
+                            <h1 class="modal-title fs-5" id="botaoModal">Cardápio - Adicionar Item</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            ...
+                            <!-- Formulario -->
+                            <form id="formCardapio">
+                                <!-- Item -->
+                                <div class="mb-3">
+                                    <label for="item" class="form-label">Item</label>
+                                    <input type="text" class="form-control" id="item" name="item" placeholder="Item">
+                                </div>
+                                <!-- Preço -->
+                                <div class="mb-3">
+                                    <label for="preco" class="form-label">Preço</label>
+                                    <input type="text" class="form-control" id="preco" name="preco" placeholder="Preço">
+                                </div>
+                                <!-- Descrição -->
+                                <div class="mb-3">
+                                    <label for="descricao" class="form-label">Descrição</label>
+                                    <input type="text" class="form-control" id="descricao" name="descricao" placeholder="Descrição">
+                                </div>
+                                <!-- Footer do Modal -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="submit" class="btn btn-primary">Salvar</button>
+                                </div>
+                            </form>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-primary">Salvar</button>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -99,8 +119,15 @@
             <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
             <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
         </ul>
-        <p class="text-center text-body-secondary"><img src="./assets/images/grao de cafe tema dark.png" height="30px" alt="">© 2025 Company, Inc</p>
+        <p class="text-center text-body-secondary"><img src="./assets/images/grao de cafe tema dark.png" height="30px"
+                alt="">© 2025 Company, Inc</p>
     </footer>
+
+
+    <!-- Scripts --> 
+    <script src="./node_modules/toastify-js/src/toastify.js"></script> <!-- JS no Toastify -->
+    <script src="./src/cardapio.js"></script> <!-- JS da página -->
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> <!-- JS do Bootstrap -->
 </body>
 
 </html>
